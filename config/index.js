@@ -1,3 +1,5 @@
+const path = require('path');
+
 const config = {
   projectName: 'taro_notype',
   date: '2020-11-1',
@@ -9,8 +11,14 @@ const config = {
   },
   sourceRoot: 'src',
   outputRoot: `dist/${process.env.TARO_ENV}`,
-  plugins: [],
-  defineConstants: {
+  plugins: [
+    '@tarojs/plugin-mock',
+  ],
+  defineConstants: {},
+  alias:{
+    '@/components': path.resolve(__dirname, '..', 'src/components'),
+    '@/pages': path.resolve(__dirname, '..', 'src/pages'),
+    '@/utils': path.resolve(__dirname, '..', 'src/utils'),
   },
   copy: {
     patterns: [
@@ -45,6 +53,19 @@ const config = {
   h5: {
     publicPath: '/',
     staticDirectory: 'static',
+    router:{
+      basename:'myapp',
+      mode:'browser'
+    },
+    output:{
+      filename: 'js/[name].[hash:8].js',
+      chunkFilename: 'chunk/[name].[chunkhash:8].js'
+    },
+    // enableExtract:true,
+    // miniCssExtractPluginOption: {
+    //   filename: 'css/[name].[hash:8].css',
+    //   chunkFilename: 'css/[id].[contenthash:8].css'
+    // },
     postcss: {
       autoprefixer: {
         enable: true,

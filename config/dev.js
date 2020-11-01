@@ -1,6 +1,12 @@
 module.exports = {
   env: {
-    NODE_ENV: '"development"'
+    NODE_ENV: JSON.stringify('development')
+  },
+  terser:{
+    enable: false,
+  },
+  csso:{
+    enable:false
   },
   defineConstants: {
   },
