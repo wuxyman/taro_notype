@@ -77,7 +77,7 @@ export default {
 
 
 // service页面模版
-const serviceTep = `import Request from '../../utils/request';
+const serviceTep = `import Request from '@/utils/request';
 
 export const demo = (data) => {
   return Request({

@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import dva from './utils/dva';
 import models from './models';
+import { Provider } from 'redux';
 import './app.less';
 
 const dvaApp = dva.createApp({
@@ -22,7 +23,7 @@ class App extends Component {
 
   // this.props.children 是将要会渲染的页面
   render () {
-    return this.props.children
+    return <Provider store={store}>{this.props.children}</Provider>
   }
 }
 

@@ -39,6 +39,7 @@
     "@tarojs/cli": "3.0.15",
     "@tarojs/components": "3.0.15",
     "@tarojs/react": "3.0.15",
+    "@tarojs/redux": "^2.2.10",
     "@tarojs/runtime": "3.0.15",
     "@tarojs/taro": "3.0.15",
     "dva-core": "^2.0.3",
