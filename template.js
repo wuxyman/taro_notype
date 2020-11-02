@@ -18,10 +18,7 @@ import { View } from '@tarojs/components';
 import { connect } from '@tarojs/redux';
 import './index.scss';
 
-@connect(({${dirName}}) => ({
-  ...${dirName},
-}))
-export default class ${titleCase(dirName)} extends Component {
+class ${titleCase(dirName)} extends Component {
   config = {
     navigationBarTitleText: '${dirName}',
   };
@@ -38,6 +35,10 @@ export default class ${titleCase(dirName)} extends Component {
     )
   }
 }
+
+export default connect(({${dirName}}) => ({
+  ...${dirName},
+}))
 `;
 
 // less文件模版
