@@ -29,7 +29,7 @@ function login(params={}) {
     return wxPromisify('getSetting', params);
   }
   
-  module.exports = {
+   export default {
     login,
     getUserInfo,
     getSetting
