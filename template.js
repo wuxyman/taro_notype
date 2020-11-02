@@ -89,12 +89,10 @@ export const demo = (data) => {
 };
 `;
 
-
-
 fs.mkdirSync(`./src/pages/${dirName}`); // mkdir $1
 process.chdir(`./src/pages/${dirName}`); // cd $1
 
-fs.writeFileSync('index.js', indexTep);
+fs.writeFileSync('index.jsx', indexTep);
 fs.writeFileSync('index.less', scssTep);
 fs.writeFileSync('model.js', modelTep);
 fs.writeFileSync('service.js', serviceTep);
